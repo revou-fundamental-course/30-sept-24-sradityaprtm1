@@ -1,0 +1,58 @@
+/* ini css */
+
+body{
+    margin: 0;
+    background: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    text-align: center;
+}
+
+.suhu-style{
+    font-size: 20px;
+}
+
+.suhu-style-s{
+    font-family: math;
+    font-style: italic;
+
+}
+
+.padding-16{
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.form-btn{
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.form-btn-konversi{
+    background-color: green;
+    color: white;
+}
+
+.form-btn-reset{
+    background-color: red;
+    color: white;
+}
+
+.form-btn-reverse{
+    background-color: blue;
+    color: white;
+}
+
+textarea{
+    width: 300px; /* Lebar textarea */
+    height: 150px; /* Tinggi textarea */
+    padding: 10px; /* Jarak dalam */
+    border: 1px solid #ccc; /* Garis tepi */
+    border-radius: 4px; /* Sudut melengkung */
+    font-size: 16px; /* Ukuran font */
+    resize: vertical; /* Hanya bisa diubah ukuran vertikal */
+}

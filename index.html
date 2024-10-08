@@ -3,10 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="">
+    <title>Document Radit</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="./js/script.js"></script>
 </head>
+
 <body>
+    <header>
+        <h1>Kalkulator Konversi Suhu</h1>
+    <hr/>
+    </header>
     
+
+    <main>
+        <!-- Form Content -->
+        <Section>
+            <!-- Instruksi -->
+            <article>
+                <p>Masukkan suhu derajat Celcius (&deg;C) ke kotak dibawah, lalu klik tombol Konversi
+                    untuk mendapatkan hasil konversi dalam bentuk Fahrenheit (&deg;F).
+                </p>
+            </article>
+            <!-- Inputan Suhu -->
+            <form class="padding-16">
+                <div>
+                    <label for="input-suhu">Celcius (&deg;C)</label>
+                </div>
+
+                <textarea name="" id="input-suhu"></textarea>
+                
+                <div>
+                    <button class="form-btn form-btn-konversi" type="button">Konversi</button>
+                    <button class="form-btn form-btn-reset">Reset</button>
+                    <button class="form-btn form-btn-reverse">Reverse</button>
+                </div>
+            </form>
+            <!-- Hasil Inputan -->
+            <div class="padding-16">
+                <div>
+                    <label for="hasil-suhu">Fahrenheit (&deg;F)</label>
+                </div>
+
+                <textarea name="" id="hasil-suhu"></textarea>
+            </div>
+            <!-- Cara Kalkulasi -->
+            <div class="padding-16">
+                <div>
+                    <label for="how-to-suhu">Cara Kalkulasi:</label>
+                </div>
+
+                <textarea name="" id="how-to-suhu"></textarea>
+            </div>
+        </Section>
+
+        <!-- Info Content -->
+        <section>
+
+            <p>Fahrenheit ke Celcius</p>
+
+            <header>
+                <h2>Cara Konversi Celcius (&deg;C) ke Fahrenheit (&deg;F)</h2>
+            </header>
+
+            <hr/>
+
+            <article>
+                <p>Suhu
+                    <span class="suhu-style suhu-style-s">S</span> dalam derajat Fahrenheit (&deg;F)
+                    sama dengan suhu <span class="suhu-style suhu-style-s">S</span> dalam derajat 
+                    Celcius (&deg;C) kali <span class="suhu-style">9/5</span> tambah <span class="suhu-style">32</span>.
+                </p>
+
+                <p><span class="suhu-style suhu-style-s">S</span> 
+                    <sub>(&deg;F)</sub> = <span class="suhu-style">(</span>
+                    <span class="suhu-style suhu-style-s">S</span>
+                    <sub>(&deg;C)</sub> &#215; <span class="suhu-style"> 9/5) &#43; 32</span>
+                </p>
+
+                <p>atau</p>
+
+                <p><span class="suhu-style suhu-style-s">S</span> 
+                    <sub>(&deg;F)</sub> = <span class="suhu-style">(</span>
+                    <span class="suhu-style suhu-style-s">S</span>
+                    <sub>(&deg;C)</sub> &#215; <span class="suhu-style"> 1.8) &#43; 32</span>
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Made by Radit 2024</p>
+    </footer>
+        
+
 </body>
+
 </html>
