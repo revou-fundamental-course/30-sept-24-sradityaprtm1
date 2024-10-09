@@ -56,3 +56,12 @@ textarea{
     font-size: 16px; /* Ukuran font */
     resize: vertical; /* Hanya bisa diubah ukuran vertikal */
 }
+
+input{
+    width: 300px; /* Lebar textarea */
+    padding: 10px; /* Jarak dalam */
+    border: 1px solid #ccc; /* Garis tepi */
+    border-radius: 4px; /* Sudut melengkung */
+    font-size: 16px; /* Ukuran font */
+    resize: vertical; /* Hanya bisa diubah ukuran vertikal */
+}
