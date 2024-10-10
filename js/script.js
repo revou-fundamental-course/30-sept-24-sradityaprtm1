@@ -1,30 +1,72 @@
-// ini javascript
+let isCelsiusInput = true;  
 
-console.log('javascript tersambung')
+function validateForm() {  
 
-function validateForm() {
-    console.log('validasi fungsi berhasil terpanggil')
-    const inputSuhu = document.getElementById('input-suhu').value
-    const hasilSuhu = document.getElementById('hasil-suhu').value
+    const celsiusInput = document.getElementById('input-suhu');  
+    const fahrenheitOutput = document.getElementById('hasil-suhu');  
+    const calculationField = document.getElementById('how-to-suhu');  
 
-    if (inputSuhu == ' ') {
-        alert ('inputan anda kosong')
-    } else {
-        calculate(inputSuhu)
-    }
-}
+    console.log('mulai validasi form')
 
-function calculate(value) {
-    let result = parseFloat(value) * 2
+    if (isCelsiusInput) {  
+        const celsius = parseFloat(celsiusInput.value);  
+        console.log('Input Celcius:', celsius);
+        if (isNaN(celsius)) {  
+            alert('Silakan masukkan angka yang valid untuk Celsius.');  
+            console.log('Error: Input Celsius tidak valid.');
+            return;  
+        }  
 
-    document.getElementById('hasil-suhu').value = result
-    document.getElementById('how-to-suhu').value = value + ' x 2 = ' + result
-    console.log(parseInt(value) * 2)
-}
+        const fahrenheit = (celsius * 9/5) + 32;  
+        fahrenheitOutput.value = fahrenheit.toFixed(2);  
+        calculationField.value = `${celsius}°C × 9/5 + 32 = ${fahrenheit.toFixed(2)}°F`;  
+        console.log('Hasil konversi ke Fahrenheit:', fahrenheit.toFixed(2));
+    } else {  
+        const fahrenheit = parseFloat(celsiusInput.value);  
+        console.log('Input Fahrenheit:', fahrenheit);
 
-function reset(value) {
-    document.getElementById('input-suhu').value = ' '
-    document.getElementById('hasil-suhu').value = ' '
-    document.getElementById('how-to-suhu').value = ' '
-    console.log('berhasil dihapus')
-}
+        if (isNaN(fahrenheit)) {  
+            alert('Silakan masukkan angka yang valid untuk Fahrenheit.');
+            console.log('Error: Input Fahrenheit tidak valid.');  
+            return;  
+        }  
+
+        const celsius = (fahrenheit - 32) * 5/9;  
+        fahrenheitOutput.value = celsius.toFixed(2);  
+        calculationField.value = `${fahrenheit}°F - 32 × 5/9 = ${celsius.toFixed(2)}°C`;  
+        console.log('Hasil konversi ke Celsius:', celsius.toFixed(2));
+    }  
+}  
+
+function reset() {  
+    document.getElementById('input-suhu').value = '';  
+    document.getElementById('hasil-suhu').value = '';  
+    document.getElementById('how-to-suhu').value = '';
+    console.log('Berhasil reset.')  
+}  
+
+function reverse() {  
+    isCelsiusInput = !isCelsiusInput;  
+    console.log('Mode input dibalik, isCelsiusInput:', isCelsiusInput);
+
+    const celsiusInput = document.getElementById('input-suhu');  
+    const fahrenheitOutput = document.getElementById('hasil-suhu');  
+    const calculationField = document.getElementById('how-to-suhu');  
+    const labelCelsius = document.getElementById('label-celcius');  
+    const labelFahrenheit = document.getElementById('label-fahrenheit');  
+
+    if (isCelsiusInput) {  
+        labelCelsius.innerText = "Celcius (°C)";  
+        labelFahrenheit.innerText = "Fahrenheit (°F)";  
+        celsiusInput.placeholder = "Masukkan suhu Celcius";  
+        fahrenheitOutput.placeholder = "Isi hasil konversi";  
+    } else {  
+        labelCelsius.innerText = "Fahrenheit (°F)";  
+        labelFahrenheit.innerText = "Celcius (°C)";  
+        celsiusInput.placeholder = "Masukkan suhu Fahrenheit";  
+        fahrenheitOutput.placeholder = "Isi hasil konversi";  
+    }  
+
+    // Clear inputs and results  
+    reset();  
+} 

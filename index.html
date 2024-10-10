@@ -8,7 +8,11 @@
     <script src="js\script.js"></script>
 </head>
 
-<body>
+<body style="background-image: url('image/suhu.jpg');
+background-repeat: no-repeat;
+background-position: top;
+background-size: cover;
+background-attachment: scroll;">
     <header>
         <h1>Kalkulator Konversi Suhu</h1>
     <hr/>
@@ -17,7 +21,7 @@
 
     <main>
         <!-- Form Content -->
-        <Section>
+        <section>
             <!-- Instruksi -->
             <article>
                 <p>Masukkan suhu derajat Celcius (&deg;C) ke kotak dibawah, lalu klik tombol Konversi
@@ -27,10 +31,10 @@
             <!-- Inputan Suhu -->
             <form class="padding-16">
                 <div>
-                    <label for="input-suhu">Celcius (&deg;C)</label>
+                    <label id="label-celcius" for="input-suhu" placeholder="Masukan suhu Celcius">Celcius (&deg;C)</label>
                 </div>
 
-                <input type="number" id="input-suhu"></input>
+                <input type="number" id="input-suhu" placeholder="Masukan suhu Celcius">
                 
             </form>
 
@@ -43,11 +47,11 @@
             <!-- Hasil Inputan -->
             <div class="padding-16">
 
-                <input type="number" id="hasil-suhu" readonly></input>
-
                 <div>
-                    <label for="hasil-suhu">Fahrenheit (&deg;F)</label>
+                    <label id="label-fahrenheit" for="hasil-suhu" placeholder="Masukan suhu Fahrenheit">Fahrenheit (&deg;F)</label>
                 </div>
+
+                <input type="number" id="hasil-suhu" placeholder="Isi hasil konversi" readonly>
 
             </div>
             <!-- Cara Kalkulasi -->
@@ -58,7 +62,7 @@
 
                 <textarea name="" id="how-to-suhu" readonly></textarea>
             </div>
-        </Section>
+        </section>
 
         <!-- Info Content -->
         <section>
